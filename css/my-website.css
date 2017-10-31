@@ -1,0 +1,50 @@
+body {
+  padding: 0 300px;
+  margin: 0;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-container > .link-container > a {
+  line-height: 50px;
+}
+
+.portfolio-container > h1 {
+  text-align: center;
+}
+
+.portfolio-container .technologies > img {
+  width: 50px;
+}
+
+.portfolio-container > .showcase {
+  display: flex;
+}
+
+.portfolio-container > .showcase:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.portfolio-container > .showcase > .project-picture {
+  flex: 1;
+}
+
+.portfolio-container > .showcase > .project-picture > img {
+  width: 100%;
+}
+
+.portfolio-container > .showcase > .project-picture > .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.portfolio-container > .showcase > .project-text {
+  flex: 2;
+}
+ 
+
+ /*# sourceMappingURL= my-website.css.map */

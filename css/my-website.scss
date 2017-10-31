@@ -1,0 +1,41 @@
+body {
+  padding: 0 300px;
+  margin: 0;
+}
+
+.nav-container {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & > .link-container > a {
+    line-height: 50px;
+  }
+}
+
+.portfolio-container {
+  & > h1 {
+    text-align: center;
+  }
+  & .technologies > img {
+    width: 50px;
+  }
+  & > .showcase {
+    display: flex;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    & > .project-picture {
+      flex: 1;
+      & > img {
+        width: 100%;
+      }
+      & > .buttons {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+    & > .project-text {
+      flex: 2;
+    }
+  }
+}
