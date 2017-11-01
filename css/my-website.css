@@ -1,16 +1,24 @@
 body {
-  padding: 0 300px;
+  padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .nav-container > .link-container > a {
   line-height: 50px;
+}
+
+.portfolio-container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .portfolio-container > h1 {
@@ -23,10 +31,19 @@ body {
 
 .portfolio-container > .showcase {
   display: flex;
+  flex-direction: column;
 }
 
-.portfolio-container > .showcase:nth-child(even) {
-  flex-direction: row-reverse;
+@media screen and (min-width: 900px) {
+  .portfolio-container > .showcase {
+    flex-direction: row;
+  }
+  .portfolio-container > .showcase:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .portfolio-container > .showcase:nth-child(even) > .project-text {
+    text-align: right;
+  }
 }
 
 .portfolio-container > .showcase > .project-picture {
@@ -44,6 +61,50 @@ body {
 
 .portfolio-container > .showcase > .project-text {
   flex: 2;
+  padding: 0 65px;
+}
+
+.skillset-container > h1 {
+  text-align: center;
+}
+
+.skillset-container > .skillset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skillset-container > .skillset > .skill {
+  width: 100px;
+}
+
+.skillset-container > .skillset > .skill > img {
+  width: 100%;
+}
+
+.skillset-container > .skillset > .skill > p {
+  text-align: center;
+  margin: 0;
+}
+
+.contact-container > h1 {
+  text-align: center;
+}
+
+.contact-container .contact {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-container .contact input, .contact-container .contact textarea {
+  display: block;
+  width: 100%;
+}
+
+.contact-container .contact button {
+  display: block;
+  margin-left: auto;
 }
  
 

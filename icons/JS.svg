@@ -1,0 +1,38 @@
+<svg width="298" height="338" viewBox="0 0 298 338" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(160 471)">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-159.725 -470.393)" fill="#E4A227"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(-11.25 -445.942)" fill="#F0BF26"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(-92.973 -277.45)" fill="#EBEBEB"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path3_fill" transform="translate(-92.849 -431.571)" fill="#EBEBEB"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(-6.54303 -431.588)" fill="#FFFFFF"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path5_fill" transform="translate(-10.51 -431.571)" fill="#FFFFFF"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path6_fill" transform="translate(-11.436 -333.307)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 27.07 303.622L -6.10352e-06 3.78418e-06L 297.45 3.78418e-06L 270.352 303.573L 148.543 337.343L 27.07 303.622Z"/>
+<path id="path1_fill" d="M 0 286.704L 98.428 259.417L 121.586 -7.44629e-06L 0 -7.44629e-06L 0 286.704Z"/>
+<path id="path2_fill" d="M 81.666 40.851L 81.504 40.898L 40.032 29.698L 37.379 1.2207e-05L 17.229 1.2207e-05L 8.05664e-06 1.2207e-05L 5.21699 58.468L 81.494 79.644L 81.666 79.595L 81.666 40.851Z"/>
+<path id="path3_fill" d="M 86.558 135.483L 86.558 98.246L 40.704 98.246L 46.081 39.804L 86.661 38.723L 86.558 -5.24902e-06L 12.414 -5.24902e-06L 9.66 27.449L 0.90799 125.484L 9.76562e-07 135.483L 10.035 135.483L 86.558 135.483Z"/>
+<path id="path4_fill" d="M -2.97852e-05 38.792L 0.162995 38.746L 40.834 41.195L 44.285 79.642L 64.436 79.642L 81.666 79.642L 75.152 7.696L 0.172028 -3.54004e-06L -2.97852e-05 0.0480006L -2.97852e-05 38.792Z"/>
+<path id="path5_fill" d="M 81.794 38.889L 78.603 -5.24902e-06L -9.76562e-06 -5.24902e-06L -9.76562e-06 24.152L -9.76562e-06 38.792L -9.76562e-06 38.889L 81.794 38.889Z"/>
+<path id="path6_fill" d="M -4.63867e-06 2.31934e-06L -4.63867e-06 37.236L 45.854 37.236L 41.532 85.53L -4.63867e-06 96.741L -4.63867e-06 135.483L 76.34 114.325L 76.899 108.034L 85.651 9.99899L 86.559 2.31934e-06L 76.524 2.31934e-06L -4.63867e-06 2.31934e-06Z"/>
+</defs>
+</svg>

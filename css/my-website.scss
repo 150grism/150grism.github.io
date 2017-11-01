@@ -1,6 +1,7 @@
 body {
-  padding: 0 300px;
+  padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav-container {
@@ -10,9 +11,13 @@ body {
   & > .link-container > a {
     line-height: 50px;
   }
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .portfolio-container {
+  max-width: 1000px;
+  margin: 0 auto;
   & > h1 {
     text-align: center;
   }
@@ -21,8 +26,15 @@ body {
   }
   & > .showcase {
     display: flex;
-    &:nth-child(even) {
-      flex-direction: row-reverse;
+    flex-direction: column;
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        & >.project-text {
+          text-align: right;
+        }
+      }
     }
     & > .project-picture {
       flex: 1;
@@ -36,6 +48,47 @@ body {
     }
     & > .project-text {
       flex: 2;
+      padding: 0 65px;
+    }
+  }
+}
+
+.skillset-container {
+  & > h1 {
+    text-align: center;
+  }
+  & > .skillset {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    & > .skill {
+      width: 100px;
+      & > img {
+        width: 100%;
+      }
+      & > p {
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.contact-container {
+  & > h1 {
+    text-align: center;
+  }
+  .contact {
+    max-width: 600px;
+    margin: 0 auto;
+    & input, textarea {
+      display: block;
+      width: 100%;
+    }
+    & button {
+      display: block;
+      margin-left: auto;
     }
   }
 }
