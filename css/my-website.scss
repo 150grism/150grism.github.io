@@ -21,9 +21,6 @@ body {
   & > h1 {
     text-align: center;
   }
-  & .technologies > img {
-    width: 50px;
-  }
   & > .showcase {
     display: flex;
     flex-direction: column;
@@ -39,16 +36,25 @@ body {
     & > .project-picture {
       flex: 1;
       & > img {
-        width: 100%;
+        height: 300px;
+        display: block;
+        margin: 0 auto;
       }
       & > .buttons {
         display: flex;
-        justify-content: space-around;
+        & button {
+          margin: 0 5px;
+        }
+        justify-content: center;
       }
     }
     & > .project-text {
       flex: 2;
       padding: 0 65px;
+      & > .technologies > img {
+        vertical-align: top;
+        width: 50px;
+      }
     }
   }
 }
@@ -63,7 +69,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     & > .skill {
-      width: 100px;
+      width: 75px;
       & > img {
         width: 100%;
       }
