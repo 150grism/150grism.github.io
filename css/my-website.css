@@ -13,7 +13,8 @@ body {
 }
 
 .nav-container > .link-container > a {
-  line-height: 50px;
+  display: inline-block;
+  margin: 16px 0;
 }
 
 .portfolio-container {
@@ -63,7 +64,6 @@ body {
 
 .portfolio-container > .showcase > .project-text {
   flex: 2;
-  padding: 0 65px;
 }
 
 .portfolio-container > .showcase > .project-text > .technologies > img {
@@ -84,6 +84,7 @@ body {
 
 .skillset-container > .skillset > .skill {
   width: 75px;
+  margin: 5px;
 }
 
 .skillset-container > .skillset > .skill > img {
@@ -112,6 +113,22 @@ body {
 .contact-container .contact button {
   display: block;
   margin-left: auto;
+}
+
+.buttons {
+  margin-top: 8px;
+}
+
+.buttons > button {
+  height: 28px;
+  border: none;
+  padding: 0 8px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.buttons > button:active {
+  transform: translateY(1px);
 }
  
 

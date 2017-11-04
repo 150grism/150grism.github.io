@@ -9,7 +9,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   & > .link-container > a {
-    line-height: 50px;
+    display: inline-block;
+    margin: 16px 0;
   }
   max-width: 1000px;
   margin: 0 auto;
@@ -50,7 +51,7 @@ body {
     }
     & > .project-text {
       flex: 2;
-      padding: 0 65px;
+      // padding: 0 65px;
       & > .technologies > img {
         vertical-align: top;
         width: 50px;
@@ -70,6 +71,7 @@ body {
     justify-content: center;
     & > .skill {
       width: 75px;
+      margin: 5px;
       & > img {
         width: 100%;
       }
@@ -87,6 +89,7 @@ body {
   }
   .contact {
     max-width: 600px;
+    // padding: 0 16px;
     margin: 0 auto;
     & input, textarea {
       display: block;
@@ -95,6 +98,23 @@ body {
     & button {
       display: block;
       margin-left: auto;
+    }
+  }
+}
+
+// --------------------------------------------------
+
+.buttons {
+  margin-top: 8px;
+  & > button {
+    height: 28px;
+    border: none;
+    padding: 0 8px;
+    border-radius: 2px;
+    outline: none;
+    // min-width: 88px;
+    &:active {
+      transform: translateY(1px);
     }
   }
 }
