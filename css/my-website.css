@@ -1,7 +1,26 @@
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 15px;
   font-family: 'Roboto', sans-serif;
+}
+
+.skillset-container > .skillset > .skill, .portfolio-container > .showcase > .project-text > .technologies > .skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 75px;
+  margin: 5px;
+  min-height: 111.06px;
+}
+
+.skillset-container > .skillset > .skill > img, .portfolio-container > .showcase > .project-text > .technologies > .skill > img {
+  margin: auto 0;
+  width: 100%;
+}
+
+.skillset-container > .skillset > .skill > p, .portfolio-container > .showcase > .project-text > .technologies > .skill > p {
+  text-align: center;
+  margin: 4px 0;
 }
 
 .nav-container {
@@ -17,18 +36,31 @@ body {
   margin: 16px 0;
 }
 
+.skillset-container > h1 {
+  text-align: center;
+}
+
+.skillset-container > .skillset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .portfolio-container {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 120px auto;
 }
 
 .portfolio-container > h1 {
   text-align: center;
+  margin: 60px 0;
 }
 
 .portfolio-container > .showcase {
   display: flex;
   flex-direction: column;
+  margin: 120px auto;
 }
 
 @media screen and (min-width: 900px) {
@@ -41,16 +73,22 @@ body {
   .portfolio-container > .showcase:nth-child(even) > .project-text {
     text-align: right;
   }
+  .portfolio-container > .showcase:nth-child(even) > .project-text > .technologies {
+    flex-direction: row;
+  }
 }
 
 .portfolio-container > .showcase > .project-picture {
   flex: 1;
+  margin: 0 15px;
 }
 
 .portfolio-container > .showcase > .project-picture > img {
-  height: 300px;
+  width: 100%;
   display: block;
   margin: 0 auto;
+  max-height: 300px;
+  object-fit: contain;
 }
 
 .portfolio-container > .showcase > .project-picture > .buttons {
@@ -63,37 +101,25 @@ body {
 }
 
 .portfolio-container > .showcase > .project-text {
+  font-size: 16px;
   flex: 2;
+  padding: 15px 30px;
 }
 
-.portfolio-container > .showcase > .project-text > .technologies > img {
-  vertical-align: top;
-  width: 50px;
+.portfolio-container > .showcase > .project-text > h5 {
+  margin: 16px 0 0 0;
 }
 
-.skillset-container > h1 {
-  text-align: center;
-}
-
-.skillset-container > .skillset {
+.portfolio-container > .showcase > .project-text > .technologies {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
-.skillset-container > .skillset > .skill {
-  width: 75px;
-  margin: 5px;
-}
-
-.skillset-container > .skillset > .skill > img {
-  width: 100%;
-}
-
-.skillset-container > .skillset > .skill > p {
-  text-align: center;
-  margin: 0;
+.portfolio-container > .showcase > .project-text > .technologies > .skill {
+  width: 65px;
+  font-size: 14px;
 }
 
 .contact-container > h1 {
@@ -102,6 +128,7 @@ body {
 
 .contact-container .contact {
   max-width: 600px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -116,7 +143,7 @@ body {
 }
 
 .buttons {
-  margin-top: 8px;
+  margin: 8px 0;
 }
 
 .buttons > button {
