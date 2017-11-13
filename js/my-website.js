@@ -1,9 +1,10 @@
 var menuButton = document.querySelectorAll('.mobile-menu');
 var navOverlay = document.querySelector('.nav-overlay');
+var navContainer = document.querySelector('.nav-container');
 var overlayVisible = false;
 
 menuButton.forEach((oneButton) => {
-  oneButton.onclick = function() {
+  oneButton.onclick = () => {
     if (overlayVisible === false) {
       navOverlay.style.width = "100%";
       overlayVisible = true;
@@ -13,4 +14,16 @@ menuButton.forEach((oneButton) => {
     }
     // console.log('sadf');
   }
-})
+});
+
+console.log(window.scrollY);
+
+window.onscroll = () => {
+  if (window.scrollY > 0) {
+    navContainer.classList.add('nav-scroll');
+    navOverlay.firstElementChild.style.margin = "20.5px 29px 25px 31px";
+  } else {
+    navContainer.classList.remove('nav-scroll');
+    navOverlay.firstElementChild.style.margin = "31px 30px 25px 30px";
+  }
+}
