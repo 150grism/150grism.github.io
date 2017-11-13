@@ -28,24 +28,52 @@ body {
   width: 0;
   overflow-x: hidden;
   position: fixed;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background: #003342;
+  transition: all 0.2s;
+}
+
+.nav-overlay > a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+}
+
+.nav-overlay > img {
+  align-self: flex-end;
+  margin: 31px 15px 10px 0;
+  fill: white;
 }
 
 .nav-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 22px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+.nav-container > p {
+  margin: 30px 30px;
+}
+
 .nav-container > .link-container > a {
   display: inline-block;
-  margin: 16px 0;
+  margin: 30px 30px;
   text-decoration: none;
+  color: black;
 }
 
 .nav-container > .mobile-menu {
   display: none;
+  width: 24px;
 }
 
 .skillset-container > h1 {
