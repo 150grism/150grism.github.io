@@ -9,8 +9,15 @@
   <link rel="stylesheet" type="text/css" href="css/my-website.css">
 </head>
 <body>
+    <div class="nav-overlay">
+        <img src="icons/close.svg" alt="close" class="mobile-menu">
+        <a href="#">Навыки</a>
+        <a href="#">Портфолио</a>
+        <a href="#">Контакт</a>
+    </div>
   <div class="nav-container">
     <p>Григорий Мошкевич</p>
+    <img src="icons/hamburger.svg" alt="menu" class="mobile-menu">
     <div class="link-container">
       <a href="">Навыки</a>
       <a href="">Портфолио</a>
@@ -121,8 +128,9 @@
         </div>
       </div>
       <div class="project-text">
-        <h4>Todo&ndash;лист</h4>
-        <p>Менеджер задач на ReactJS с базовыми функциями.</h5>
+        <h4>To&ndash;do лист</h4>
+        <p>Менеджер задач на ReactJS с базовыми функциями. Для дизайна использовалась стандартная тема Bootstrap v4 с незначительными изменениями.</p>
+        <h5>Использованные техно--логии</h5>
         <div class="technologies">
           <div class="skill">
             <img src="icons/reactJS.svg" alt="ReactJS">
@@ -153,12 +161,13 @@
     <form class="contact" action="mailto:150grism@gmail.com">
       <label for="fname">Имя</label>
       <input type="text" id="fname" name="name">
-      <label for="fmail">Тема письма</label>
-      <input type="text" id="fmail" name="_replyto">
+      <label for="fsubject">Тема письма</label>
+      <input type="text" id="fsubject" name="subject">
       <label for="ftext">Текст</label>
       <textarea name="name" id="ftext" rows="8"></textarea>
       <button type="submit">Send &gt;&gt;</button>
     </form>
   </div> 
+  <script src="js/my-website.js"></script>
 </body>
 </html>

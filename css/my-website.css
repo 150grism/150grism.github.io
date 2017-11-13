@@ -23,6 +23,13 @@ body {
   margin: 4px 0;
 }
 
+.nav-overlay {
+  height: 100vh;
+  width: 0;
+  overflow-x: hidden;
+  position: fixed;
+}
+
 .nav-container {
   display: flex;
   flex-direction: row;
@@ -34,6 +41,11 @@ body {
 .nav-container > .link-container > a {
   display: inline-block;
   margin: 16px 0;
+  text-decoration: none;
+}
+
+.nav-container > .mobile-menu {
+  display: none;
 }
 
 .skillset-container > h1 {
@@ -84,6 +96,7 @@ body {
 }
 
 .portfolio-container > .showcase > .project-picture > img {
+  image-rendering: -webkit-optimize-contrast;
   width: 100%;
   display: block;
   margin: 0 auto;
@@ -107,11 +120,15 @@ body {
 }
 
 .portfolio-container > .showcase > .project-text > h4 {
-  margin-top: 0;
+  margin: 0;
 }
 
 .portfolio-container > .showcase > .project-text > h5 {
-  margin: 16px 0 0 0;
+  margin: 10px 0 5px;
+}
+
+.portfolio-container > .showcase > .project-text > p {
+  margin: 10px 0;
 }
 
 .portfolio-container > .showcase > .project-text > .technologies {
@@ -161,6 +178,15 @@ body {
 
 .buttons > button:active {
   transform: translateY(1px);
+}
+
+@media screen and (max-width: 900px) {
+  .nav-container > .mobile-menu {
+    display: block;
+  }
+  .nav-container > .link-container {
+    display: none;
+  }
 }
  
 

@@ -4,7 +4,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-//-----------------------------------------------------
+//placeholder-----------------------------------------------------
 %placeholder-for-Skill {
   & > .skill {
     display: flex;
@@ -25,16 +25,27 @@ body {
 }
 //-----------------------------------------------------
 
+.nav-overlay {
+  height: 100vh;
+  width: 0;
+  overflow-x: hidden;
+  position: fixed;
+}
+
 .nav-container {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   & > .link-container > a {
     display: inline-block;
     margin: 16px 0;
+    text-decoration: none;
   }
   max-width: 1000px;
   margin: 0 auto;
+  & > .mobile-menu {
+    display: none;
+  }
 }
 
 
@@ -78,6 +89,8 @@ body {
       flex: 1;
       margin: 0 15px;
       & > img {
+        // ! wth is this:
+          image-rendering: -webkit-optimize-contrast;
         width: 100%;
         display: block;
         margin: 0 auto;
@@ -97,10 +110,13 @@ body {
       flex: 2;
       padding: 0 30px 15px;
       & > h4 {
-        margin-top: 0;
+        margin: 0;
       }
       & > h5 {
-        margin: 16px 0 0 0;
+        margin: 10px 0 5px;
+      }
+      & > p {
+        margin: 10px 0;
       }
       & > .technologies {
         display: flex;
@@ -150,6 +166,23 @@ body {
     // min-width: 88px;
     &:active {
       transform: translateY(1px);
+    }
+  }
+}
+
+
+
+
+//------------------------------------------------------------------
+//media queries-----------------------------------------------------
+
+@media screen and (max-width: 900px) {
+  .nav-container {
+    & > .mobile-menu {
+      display: block;
+    }
+    & > .link-container {
+      display: none;
     }
   }
 }
