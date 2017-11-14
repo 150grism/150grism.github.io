@@ -1,18 +1,23 @@
 body {
   padding: 0;
-  margin: 0 15px;
+  margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   text-align: center;
-  margin: 60px 0;
+  padding: 60px 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 480px) {
   h1 {
-    margin: calc(60px / 2) 0;
+    padding: calc(60px / 2) 0;
   }
+}
+
+.marginating-container {
+  margin: 0;
 }
 
 #skillset-container > .skillset > .skill, #portfolio-container > .showcase > .project-text > .technologies > .skill {
@@ -61,7 +66,7 @@ h1 {
 .nav-overlay > a {
   display: block;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   text-decoration: none;
   font-size: 22px;
   color: white;
@@ -145,7 +150,7 @@ h1 {
 }
 
 #intro {
-  margin: 150px auto 120px;
+  margin: 150px auto 60px;
   text-align: center;
 }
 
@@ -166,16 +171,38 @@ h1 {
   }
 }
 
+#intro > a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#skillset-container {
+  margin: 60px auto;
+}
+
+@media screen and (max-width: 480px) {
+  #skillset-container {
+    margin: 60px auto;
+  }
+}
+
 #skillset-container > .skillset {
+  padding: 60px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+@media screen and (max-width: 480px) {
+  #skillset-container > .skillset {
+    padding: 60px 0;
+  }
+}
+
 #portfolio-container {
+  margin: 60px auto;
   max-width: 1000px;
-  margin: 120px auto;
 }
 
 @media screen and (max-width: 480px) {
@@ -187,27 +214,33 @@ h1 {
 #portfolio-container > .showcase {
   display: flex;
   flex-direction: column;
-  margin: inherit;
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 480px) {
+  #portfolio-container > .showcase {
+    padding: 60px 0;
+  }
 }
 
 @media screen and (min-width: 900px) {
   #portfolio-container > .showcase {
     flex-direction: row;
   }
-  #portfolio-container > .showcase:nth-child(even) {
+  #portfolio-container > .showcase:nth-of-type(even) {
     flex-direction: row-reverse;
   }
-  #portfolio-container > .showcase:nth-child(even) > .project-text {
+  #portfolio-container > .showcase:nth-of-type(even) > .project-text {
     text-align: right;
   }
-  #portfolio-container > .showcase:nth-child(even) > .project-text > .technologies {
+  #portfolio-container > .showcase:nth-of-type(even) > .project-text > .technologies {
     justify-content: flex-end;
   }
 }
 
 @media screen and (max-width: 480px) {
   #portfolio-container > .showcase > .project-text {
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
 }
 
@@ -230,14 +263,14 @@ h1 {
   justify-content: center;
 }
 
-#portfolio-container > .showcase > .project-picture > .buttons button {
-  margin: 0 5px;
+#portfolio-container > .showcase > .project-picture > .buttons a {
+  margin: 0 7px;
 }
 
 #portfolio-container > .showcase > .project-text {
   font-size: 20px;
   flex: 2;
-  padding: 0 30px 15px;
+  padding: 0 30px;
 }
 
 #portfolio-container > .showcase > .project-text > h4 {
@@ -277,30 +310,71 @@ h1 {
   }
 }
 
+#contact-container {
+  margin: 60px 0 0;
+  background: #003342;
+}
+
 #contact-container * {
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: #c2e2ea;
 }
 
 #contact-container > p {
   font-size: 36px;
+  margin: 0;
+  padding-bottom: 40px;
 }
 
-.buttons {
-  margin: 23px 0;
+#contact-container > p > a:hover {
+  color: white;
 }
 
-.buttons > button {
+@media screen and (max-width: 480px) {
+  #contact-container > p {
+    font-size: 32px;
+  }
+}
+
+#contact-container > h1 {
+  color: #76bed0;
+}
+
+.single-button, .buttons > a {
   height: 24px;
-  border: none;
+  line-height: 24px;
+  background: #eeeeee;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
   padding: 0 8px;
   border-radius: 4px;
   outline: none;
 }
 
-.buttons > button:active {
+.single-button:hover, .buttons > a:hover {
+  transform: translateY(-1px);
+}
+
+.single-button:active, .buttons > a:active {
   transform: translateY(1px);
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 480px) {
+  .buttons {
+    margin: 25px 0 40px;
+  }
+}
+
+.separator {
+  margin: 0 auto;
+  padding: 10px 0;
+  display: block;
 }
 
 @media screen and (max-width: 900px) {

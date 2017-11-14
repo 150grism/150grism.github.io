@@ -1,18 +1,25 @@
 $skill-width: 75px;
 $h1-margin: 60px;
+$padding1: 60px;
+$padding2: 60px;
 
 body {
   padding: 0;
-  margin: 0 15px;
+  margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   text-align: center;
-  margin: $h1-margin 0;
+  padding: $h1-margin 0;
+  margin: 0;
   @media screen and (max-width: 480px) {
-    margin: calc(#{$h1-margin} / 2) 0;
+    padding: calc(#{$h1-margin} / 2) 0;
   }
+}
+
+.marginating-container {
+  margin: 0;
 }
 
 //placeholder-----------------------------------------------------
@@ -58,7 +65,7 @@ h1 {
   & > a {
     display: block;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     text-decoration: none;
     font-size: 22px;
     color: white;
@@ -138,7 +145,7 @@ h1 {
 }
 
 #intro {
-  margin: 150px auto 120px;
+  margin: 150px auto 60px;
   @media (max-width: 480px) {
     margin: 150px auto 60px;
   }
@@ -149,15 +156,23 @@ h1 {
     @media (max-width: 900px) {
       font-size: 42px;
     }
-    // margin-bottom: 20px;
   }
-  // & > button {
-  //   font-size: 24px;
-  // }
+  & > a {
+    display: inline-block;
+    cursor: pointer;
+  }
 }
 
 #skillset-container {
+  margin: $padding1 auto;
+  @media screen and (max-width: 480px) {
+    margin: $padding2 auto;
+  }
   & > .skillset {
+    padding: $padding1 0;
+    @media screen and (max-width: 480px) {
+      padding: $padding2 0;
+    }
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -167,18 +182,21 @@ h1 {
 }
 
 #portfolio-container {
-  max-width: 1000px;
-  margin: 120px auto;
+  margin: $padding1 auto;
   @media screen and (max-width: 480px) {
-    margin: 60px auto;
+    margin: $padding2 auto;
   }
+  max-width: 1000px;
   & > .showcase {
     display: flex;
     flex-direction: column;
-    margin: inherit;
+    padding: $padding1 0;
+    @media screen and (max-width: 480px) {
+      padding: $padding2 0;
+    }
     @media screen and (min-width: 900px) {
       flex-direction: row;
-      &:nth-child(even) {
+      &:nth-of-type(even) {
         flex-direction: row-reverse;
         & >.project-text {
           text-align: right;
@@ -190,7 +208,7 @@ h1 {
     }
     @media screen and (max-width: 480px) {
       & > .project-text {
-        font-size: 16px !important;
+        font-size: 18px !important;
       }
     }
     & > .project-picture {
@@ -207,8 +225,8 @@ h1 {
       }
       & > .buttons {
         display: flex;
-        & button {
-          margin: 0 5px;
+        & a {
+          margin: 0 7px;
         }
         justify-content: center;
       }
@@ -216,7 +234,7 @@ h1 {
     & > .project-text {
       font-size: 20px;
       flex: 2;
-      padding: 0 30px 15px;
+      padding: 0 30px;
       & > h4 {
         margin: 0;
       }
@@ -251,30 +269,63 @@ h1 {
 }
 
 #contact-container {
+  margin: $h1-margin 0 0;
+  background: #003342;
   & * {
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: #c2e2ea;
   }
   & > p {
     font-size: 36px;
+    margin: 0;
+    padding-bottom: 40px;
+    & > a:hover {
+      color: white;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 32px;
+    }
+  }
+  & > h1 {
+    color:  #76bed0;
   }
 }
 
 // --------------------------------------------------
+.single-button {
+  height: 24px;
+  line-height: 24px;
+  background: #eeeeee;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 0 8px;
+  border-radius: 4px;
+  outline: none;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
 
 .buttons {
-  margin: 23px 0;
-  & > button {
-    height: 24px;
-    border: none;
-    padding: 0 8px;
-    border-radius: 4px;
-    outline: none;
-    &:active {
-      transform: translateY(1px);
-    }
+  margin-top: 25px;
+  @media screen and (max-width: 480px) {
+    margin: 25px 0 40px;
   }
+  & > a {
+    @extend .single-button;
+  }
+}
+
+.separator {
+  // width: 100px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: block;
 }
 
 
