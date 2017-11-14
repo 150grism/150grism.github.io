@@ -337,7 +337,7 @@ h1 {
 .buttons {
   margin-top: 25px;
   @media screen and (max-width: 480px) {
-    margin: 25px 0 40px;
+    margin: 25px 0 25px;
   }
   & > a {
     @extend .single-button;
