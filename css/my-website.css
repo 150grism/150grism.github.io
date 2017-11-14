@@ -15,7 +15,7 @@ h1 {
   }
 }
 
-.skillset-container > .skillset > .skill, .portfolio-container > .showcase > .project-text > .technologies > .skill {
+#skillset-container > .skillset > .skill, #portfolio-container > .showcase > .project-text > .technologies > .skill {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -24,22 +24,22 @@ h1 {
   min-height: 111.06px;
 }
 
-.skillset-container > .skillset > .skill > img, .portfolio-container > .showcase > .project-text > .technologies > .skill > img {
+#skillset-container > .skillset > .skill > img, #portfolio-container > .showcase > .project-text > .technologies > .skill > img {
   margin: auto 0;
   width: 100%;
 }
 
-.skillset-container > .skillset > .skill > p, .portfolio-container > .showcase > .project-text > .technologies > .skill > p {
+#skillset-container > .skillset > .skill > p, #portfolio-container > .showcase > .project-text > .technologies > .skill > p {
   text-align: center;
   margin: 4px 0;
 }
 
 @media screen and (max-width: 480px) {
-  .skillset-container > .skillset > .skill, .portfolio-container > .showcase > .project-text > .technologies > .skill {
+  #skillset-container > .skillset > .skill, #portfolio-container > .showcase > .project-text > .technologies > .skill {
     width: calc(75px * 0.8);
     min-height: 103.06px;
   }
-  .skillset-container > .skillset > .skill > p, .portfolio-container > .showcase > .project-text > .technologies > .skill > p {
+  #skillset-container > .skillset > .skill > p, #portfolio-container > .showcase > .project-text > .technologies > .skill > p {
     font-size: 13px;
   }
 }
@@ -65,6 +65,7 @@ h1 {
   text-decoration: none;
   font-size: 22px;
   color: white;
+  cursor: default;
 }
 
 .nav-overlay > img {
@@ -87,7 +88,7 @@ h1 {
   transition: all 0.7s !important;
 }
 
-.nav-scroll > .nav-container > p, .nav-scroll .nav-container > .link-container > a {
+.nav-scroll > .nav-container > a, .nav-scroll .nav-container > .link-container > a {
   font-size: 16px;
   line-height: 22.5px;
   margin: 20px 30px !important;
@@ -112,10 +113,13 @@ h1 {
   margin: 0 auto;
 }
 
-.nav-container > p {
+.nav-container > a {
   transition: margin 0.2s, font-size 0.2s;
   margin: 30px 30px;
   white-space: nowrap;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 .nav-container > .link-container > a {
@@ -124,6 +128,7 @@ h1 {
   margin: 30px 30px;
   text-decoration: none;
   color: black;
+  cursor: default;
 }
 
 .nav-container > .mobile-menu {
@@ -139,79 +144,79 @@ h1 {
   background: black;
 }
 
-.intro {
+#intro {
   margin: 150px auto 120px;
   text-align: center;
 }
 
 @media (max-width: 480px) {
-  .intro {
+  #intro {
     margin: 150px auto 60px;
   }
 }
 
-.intro > p {
+#intro > p {
   font-size: 64px;
   margin: 24px 0;
 }
 
 @media (max-width: 900px) {
-  .intro > p {
+  #intro > p {
     font-size: 42px;
   }
 }
 
-.skillset-container > .skillset {
+#skillset-container > .skillset {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.portfolio-container {
+#portfolio-container {
   max-width: 1000px;
   margin: 120px auto;
 }
 
 @media screen and (max-width: 480px) {
-  .portfolio-container {
+  #portfolio-container {
     margin: 60px auto;
   }
 }
 
-.portfolio-container > .showcase {
+#portfolio-container > .showcase {
   display: flex;
   flex-direction: column;
   margin: inherit;
 }
 
 @media screen and (min-width: 900px) {
-  .portfolio-container > .showcase {
+  #portfolio-container > .showcase {
     flex-direction: row;
   }
-  .portfolio-container > .showcase:nth-child(even) {
+  #portfolio-container > .showcase:nth-child(even) {
     flex-direction: row-reverse;
   }
-  .portfolio-container > .showcase:nth-child(even) > .project-text {
+  #portfolio-container > .showcase:nth-child(even) > .project-text {
     text-align: right;
   }
-  .portfolio-container > .showcase:nth-child(even) > .project-text > .technologies {
-    flex-direction: row;
+  #portfolio-container > .showcase:nth-child(even) > .project-text > .technologies {
+    justify-content: flex-end;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .portfolio-container > .showcase > .project-text {
+  #portfolio-container > .showcase > .project-text {
     font-size: 16px !important;
   }
 }
 
-.portfolio-container > .showcase > .project-picture {
+#portfolio-container > .showcase > .project-picture {
   flex: 1;
   margin: 0 15px;
 }
 
-.portfolio-container > .showcase > .project-picture > img {
+#portfolio-container > .showcase > .project-picture > img {
   image-rendering: -webkit-optimize-contrast;
   width: 100%;
   display: block;
@@ -220,61 +225,66 @@ h1 {
   object-fit: contain;
 }
 
-.portfolio-container > .showcase > .project-picture > .buttons {
+#portfolio-container > .showcase > .project-picture > .buttons {
   display: flex;
   justify-content: center;
 }
 
-.portfolio-container > .showcase > .project-picture > .buttons button {
+#portfolio-container > .showcase > .project-picture > .buttons button {
   margin: 0 5px;
 }
 
-.portfolio-container > .showcase > .project-text {
+#portfolio-container > .showcase > .project-text {
   font-size: 20px;
   flex: 2;
   padding: 0 30px 15px;
 }
 
-.portfolio-container > .showcase > .project-text > h4 {
+#portfolio-container > .showcase > .project-text > h4 {
   margin: 0;
 }
 
-.portfolio-container > .showcase > .project-text > h5 {
+#portfolio-container > .showcase > .project-text > h5 {
   margin: 10px 0 5px;
 }
 
-.portfolio-container > .showcase > .project-text > p {
+#portfolio-container > .showcase > .project-text > p {
   margin: 10px 0;
 }
 
-.portfolio-container > .showcase > .project-text > .technologies {
+#portfolio-container > .showcase > .project-text > .technologies {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
-.portfolio-container > .showcase > .project-text > .technologies > .skill {
+#portfolio-container > .showcase > .project-text > .technologies > .skill {
   min-height: initial;
   width: calc(75px * 0.8);
 }
 
-.portfolio-container > .showcase > .project-text > .technologies > .skill > p {
+#portfolio-container > .showcase > .project-text > .technologies > .skill > p {
   font-size: 13px;
 }
 
 @media screen and (max-width: 480px) {
-  .portfolio-container > .showcase > .project-text > .technologies > .skill {
+  #portfolio-container > .showcase > .project-text > .technologies > .skill {
     width: calc(75px * 0.8 * 0.8);
   }
-  .portfolio-container > .showcase > .project-text > .technologies > .skill > p {
+  #portfolio-container > .showcase > .project-text > .technologies > .skill > p {
     font-size: 12px;
   }
 }
 
-.contact-container * {
+#contact-container * {
   text-align: center;
   text-decoration: none;
+  color: black;
+}
+
+#contact-container > p {
+  font-size: 36px;
 }
 
 .buttons {
