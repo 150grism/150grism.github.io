@@ -1,8 +1,6 @@
 var menuButtons = document.querySelectorAll('.mobile-menu');
 var navOverlay = document.querySelector('.nav-overlay');
 var navWide = document.querySelector('.nav-wide');
-var goToHireButton = document.querySelector('.go-to-hire');
-var contactContainer = document.querySelector('.contact-container');
 var navLinks = document.querySelectorAll('.nav-link');
 var overlayVisible = false;
 
@@ -18,22 +16,15 @@ menuButtons.forEach((b) => {
   }
 });
 
-// goToHireButton.onclick = () => {
-//   // console.log(contactContainer.offsetTop);
-//   window.scrollBy({top: contactContainer.offsetTop - 62 - 50, left: 0, behavior: "smooth"});
-// };
-
 navLinks.forEach((b) => {
   b.onclick = () => {
-    // console.log(b.dataset.destination);
     let destinationElement = document.getElementById(b.dataset.destination);
     let distanceToDestination = destinationElement.offsetTop - window.pageYOffset - 62;
-    console.log(destinationElement.offsetTop);
-    window.scrollBy({top: distanceToDestination - 50, left: 0, behavior: "smooth"});
     if (overlayVisible) {
       navOverlay.style.width = "0%";
       overlayVisible = false;
     }
+    window.scrollBy({top: distanceToDestination - 50, left: 0, behavior: "smooth"});
   }
 });
 
