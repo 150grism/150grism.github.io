@@ -36,7 +36,7 @@ h1 {
 
 #skillset-container > .skillset > .skill > p, #portfolio-container > .showcase > .project-text > .technologies > .skill > p {
   text-align: center;
-  margin: 4px 0;
+  margin: 4px -4px;
 }
 
 @media screen and (max-width: 480px) {

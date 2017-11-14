@@ -37,7 +37,7 @@ h1 {
     }
     & > p {
       text-align: center;
-      margin: 4px 0;
+      margin: 4px -4px;
     }
     @media screen and (max-width: 480px) {
       width: calc(#{$skill-width} * 0.8);
