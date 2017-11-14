@@ -1,3 +1,14 @@
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+          callback.call(thisArg, this[i], i, this);
+      }
+  };
+  var edge = true;
+}
+//-----------------------------------------------------------------
+
 var menuButtons = document.querySelectorAll('.mobile-menu');
 var navOverlay = document.querySelector('.nav-overlay');
 var navWide = document.querySelector('.nav-wide');
@@ -24,11 +35,13 @@ navLinks.forEach((b) => {
       navOverlay.style.width = "0%";
       overlayVisible = false;
     }
-    window.scrollBy({top: distanceToDestination - 50, left: 0, behavior: "smooth"});
+    if (edge) {
+      window.scrollBy(0, distanceToDestination - 50);
+    } else {
+      window.scrollBy({top: distanceToDestination - 50, left: 0, behavior: "smooth"});
+    }
   }
 });
-
-console.log(window.scrollY);
 
 window.onscroll = () => {
   if (window.scrollY > 0) {
