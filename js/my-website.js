@@ -36,9 +36,9 @@ navLinks.forEach((b) => {
       overlayVisible = false;
     }
     if (edge) {
-      window.scrollBy(0, distanceToDestination - 50);
+      window.scrollBy(0, distanceToDestination + 30);
     } else {
-      window.scrollBy({top: distanceToDestination - 50, left: 0, behavior: "smooth"});
+      window.scrollBy({top: distanceToDestination + 30, left: 0, behavior: "smooth"});
     }
   }
 });
