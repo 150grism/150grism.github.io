@@ -12,7 +12,7 @@ h1 {
 
 @media screen and (max-width: 480px) {
   h1 {
-    padding: calc(60px / 2) 0;
+    padding: calc(60px) 0;
   }
 }
 
@@ -160,13 +160,14 @@ h1 {
   }
 }
 
-#intro > p {
+#intro > h1 {
+  font-weight: 100;
   font-size: 64px;
-  margin: 24px 0;
+  margin: 24px 15px;
 }
 
 @media (max-width: 900px) {
-  #intro > p {
+  #intro > h1 {
     font-size: 42px;
   }
 }
@@ -197,6 +198,37 @@ h1 {
 @media screen and (max-width: 480px) {
   #skillset-container > .skillset {
     padding: 60px 0;
+  }
+}
+
+#skillset-container:before {
+  content: '';
+  width: 100%;
+  height: 540px;
+  top: calc(476px - 0.087 * (50vw + 60px));
+  position: absolute;
+  background: #c2e2ea;
+  z-index: -1;
+  bottom: 0;
+  transform-origin: left bottom;
+  transform: skewY(5deg);
+}
+
+@media screen and (min-width: 467px) {
+  #skillset-container:before {
+    top: calc(428px - 0.087 * (50vw + 60px));
+  }
+}
+
+@media screen and (min-width: 680px) {
+  #skillset-container:before {
+    height: 420px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #skillset-container:before {
+    top: calc(454px - 0.087 * (50vw + 60px));
   }
 }
 
