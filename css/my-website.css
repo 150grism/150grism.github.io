@@ -207,7 +207,7 @@ h1 {
   height: 540px;
   top: calc(476px - 0.087 * (50vw + 60px));
   position: absolute;
-  background: #c2e2ea;
+  background: #e0e0e0;
   z-index: -1;
   bottom: 0;
   transform-origin: left bottom;

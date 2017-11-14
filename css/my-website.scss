@@ -187,17 +187,15 @@ h1 {
     top: calc(476px - 0.087 * (50vw + 60px));
     @media screen and (min-width: 467px) {
       top: calc(428px - 0.087 * (50vw + 60px));
-      // height: 78%;
     }
     @media screen and (min-width: 680px) {
       height: 420px;
     }
     @media screen and (min-width: 900px) {
       top: calc(454px - 0.087 * (50vw + 60px));
-      // height: 60%;
     }
     position: absolute;
-    background: #c2e2ea;
+    background:#e0e0e0;
     z-index: -1;
     bottom: 0;
     transform-origin: left bottom;
