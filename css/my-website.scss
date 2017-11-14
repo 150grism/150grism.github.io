@@ -1,7 +1,18 @@
+$skill-width: 75px;
+$h1-margin: 60px;
+
 body {
   padding: 0;
   margin: 0 15px;
   font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: $h1-margin 0;
+  @media screen and (max-width: 480px) {
+    margin: calc(#{$h1-margin} / 2) 0;
+  }
 }
 
 //placeholder-----------------------------------------------------
@@ -10,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 75px;
+    width: $skill-width;
     margin: 5px;
     min-height: 111.06px;
     & > img {
@@ -20,6 +31,13 @@ body {
     & > p {
       text-align: center;
       margin: 4px 0;
+    }
+    @media screen and (max-width: 480px) {
+      width: calc(#{$skill-width} * 0.8);
+      min-height: 103.06px;
+      & > p {
+        font-size: 13px;
+      }
     }
   }
 }
@@ -52,19 +70,29 @@ body {
   }
 }
 
+.nav-wide {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.2s;
+}
+
 //nav container when scrolling-------------------------
 .nav-scroll {
   background: #003342;
-  color: white;
-  transition: all 0.3s !important;
-  & > * {
+  transition: all 0.7s !important;
+  & > .nav-container > p, .nav-container > .link-container > a {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 22.5px;
     margin: 20px 30px !important;
     transition: margin 0.3s, font-size 0.3s !important;
+    color: white !important;
   }
-  & > .mobile-menu {
+  & > .nav-container > .mobile-menu {
     width: 22px !important;
+    margin: 20px 30px !important;
     filter: invert(100%);  
     transition: inherit;  
   }
@@ -72,10 +100,6 @@ body {
 //-----------------------------------------------------
 
 .nav-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -87,6 +111,7 @@ body {
     white-space: nowrap;
   }
   & > .link-container > a {
+    transition: margin 0.2s, font-size 0.2s;
     display: inline-block;
     margin: 30px 30px;
     text-decoration: none;
@@ -100,15 +125,33 @@ body {
     width: 24px;
     margin: 30px 30px 30px 0;
   }
+  &::after {
+    max-width: 100vw;
+    height: 100px;
+    background: black;
+  }
 }
 
+.intro {
+  margin: 150px auto 120px;
+  @media (max-width: 480px) {
+    margin: 150px auto 60px;
+  }
+  text-align: center;
+  & > p {
+    font-size: 64px;
+    margin: 24px 0;
+    @media (max-width: 900px) {
+      font-size: 42px;
+    }
+    // margin-bottom: 20px;
+  }
+  // & > button {
+  //   font-size: 24px;
+  // }
+}
 
 .skillset-container {
-  padding-top: 86px;
-  & > h1 {
-    text-align: center;
-    // margin-top: 0;
-  }
   & > .skillset {
     display: flex;
     flex-direction: row;
@@ -121,14 +164,13 @@ body {
 .portfolio-container {
   max-width: 1000px;
   margin: 120px auto;
-  & > h1 {
-    text-align: center;
-    margin: 60px 0;
+  @media screen and (max-width: 480px) {
+    margin: 60px auto;
   }
   & > .showcase {
     display: flex;
     flex-direction: column;
-    margin: 120px auto;
+    margin: inherit;
     @media screen and (min-width: 900px) {
       flex-direction: row;
       &:nth-child(even) {
@@ -139,6 +181,11 @@ body {
             flex-direction: row;
           }
         }
+      }
+    }
+    @media screen and (max-width: 480px) {
+      & > .project-text {
+        font-size: 16px !important;
       }
     }
     & > .project-picture {
@@ -162,7 +209,7 @@ body {
       }
     }
     & > .project-text {
-      font-size: 16px;
+      font-size: 20px;
       flex: 2;
       padding: 0 30px 15px;
       & > h4 {
@@ -182,8 +229,16 @@ body {
         @extend %placeholder-for-Skill;
         & > .skill {
           min-height: initial;
-          width: 60px;
-          font-size: 12px;
+          width: calc(#{$skill-width} * 0.8);
+          & > p {
+            font-size: 13px;
+          }
+          @media screen and (max-width: 480px) {
+            width: calc(#{$skill-width} * 0.8 * 0.8);
+            & > p {
+              font-size: 12px;
+            }
+          }
         }
       }
     }
@@ -191,21 +246,9 @@ body {
 }
 
 .contact-container {
-  & > h1 {
+  & * {
     text-align: center;
-  }
-  .contact {
-    max-width: 600px;
-    padding: 0 16px;
-    margin: 0 auto;
-    & input, textarea {
-      display: block;
-      width: 100%;
-    }
-    & button {
-      display: block;
-      margin-left: auto;
-    }
+    text-decoration: none;
   }
 }
 
@@ -219,7 +262,6 @@ body {
     padding: 0 8px;
     border-radius: 4px;
     outline: none;
-    // min-width: 88px;
     &:active {
       transform: translateY(1px);
     }
