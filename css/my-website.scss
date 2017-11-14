@@ -199,7 +199,7 @@ h1 {
       & > img {
         // ! wth is this:
           image-rendering: -webkit-optimize-contrast;
-        width: 100%;
+        max-width: 100%;
         display: block;
         margin: 0 auto;
         max-height: 300px;

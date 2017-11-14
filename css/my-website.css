@@ -218,7 +218,7 @@ h1 {
 
 #portfolio-container > .showcase > .project-picture > img {
   image-rendering: -webkit-optimize-contrast;
-  width: 100%;
+  max-width: 100%;
   display: block;
   margin: 0 auto;
   max-height: 300px;
