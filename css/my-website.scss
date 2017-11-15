@@ -5,7 +5,7 @@ $bg-4: #717171;
 $tx-1: white;
 $tx-2: #fafafa;
 $tx-3: rgba(0, 0, 0, 0.87);
-$tx-4: #74fffa;
+$tx-4: rgb(145, 255, 242);
 $tx-5: rgba(255, 255, 255, 0.87);
 
 $skill-width: 75px;
@@ -80,11 +80,12 @@ h1 {
     text-decoration: none;
     font-size: 22px;
     color: $tx-1;
-    cursor: default;
+    cursor: pointer;
   }
   & > img {
     align-self: flex-end;
     margin: 31px 29.5px 25px 30.5px;
+    cursor: pointer;
   }
 }
 
@@ -102,6 +103,10 @@ h1 {
   background: $bg-1;
   transition: all 0.7s !important;
   & > .nav-container > a, .nav-container > .link-container > a {
+    &:hover {
+      // color: $tx-4 !important;
+      opacity: 0.7;
+    }
     font-size: 16px;
     line-height: 22.5px;
     margin: 20px 30px !important;
@@ -123,6 +128,10 @@ h1 {
   justify-content: space-between;
   font-size: 22px;
   transition: all 0.2s;
+  & > a:hover, .link-container > a:hover {
+    opacity: 0.42;
+    // color: $bg-3;
+  }
   & > a {
     transition: margin 0.2s, font-size 0.2s;
     margin: 30px 30px;
@@ -137,7 +146,7 @@ h1 {
     margin: 30px 30px;
     text-decoration: none;
     color: $tx-3;
-    cursor: default;
+    cursor: pointer;
   }
   max-width: 1000px;
   margin: 0 auto;
@@ -146,6 +155,7 @@ h1 {
     display: none;
     width: 24px;
     margin: 30px 30px 30px 0;
+    cursor: pointer;
   }
   //wtf is this?:
   &::after {
@@ -165,7 +175,8 @@ h1 {
     color: black;
     font-weight: 100;
     font-size: 64px;
-    margin: 24px 15px;
+    margin: 24px 15px 0;
+    padding-bottom: 35px;
     @media (max-width: 900px) {
       font-size: 42px;
     }
@@ -174,6 +185,7 @@ h1 {
     user-select: none;
     display: inline-block;
     cursor: pointer;
+    margin: 0 15px 73px;
   }
 }
 
