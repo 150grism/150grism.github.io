@@ -1,3 +1,13 @@
+$bg-1: #26a69a;
+$bg-2: #f5f5f5;
+$bg-3: #9e9e9e;
+$bg-4: #717171;
+$tx-1: white;
+$tx-2: #fafafa;
+$tx-3: rgba(0, 0, 0, 0.87);
+$tx-4: #74fffa;
+$tx-5: rgba(255, 255, 255, 0.87);
+
 $skill-width: 75px;
 $h1-margin: 60px;
 $padding1: 60px;
@@ -7,6 +17,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  color: $tx-3;
 }
 
 h1 {
@@ -60,7 +71,7 @@ h1 {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  background: #003342;
+  background: $bg-1;
   transition: all 0.2s;
   & > a {
     display: block;
@@ -68,13 +79,12 @@ h1 {
     padding: 20px 0;
     text-decoration: none;
     font-size: 22px;
-    color: white;
+    color: $tx-1;
     cursor: default;
   }
   & > img {
     align-self: flex-end;
     margin: 31px 29.5px 25px 30.5px;
-    fill: white;
   }
 }
 
@@ -89,14 +99,14 @@ h1 {
 
 //nav container when scrolling-------------------------
 .nav-scroll {
-  background: #003342;
+  background: $bg-1;
   transition: all 0.7s !important;
   & > .nav-container > a, .nav-container > .link-container > a {
     font-size: 16px;
     line-height: 22.5px;
     margin: 20px 30px !important;
     transition: margin 0.3s, font-size 0.3s !important;
-    color: white !important;
+    color: $tx-1 !important;
   }
   & > .nav-container > .mobile-menu {
     width: 22px !important;
@@ -118,7 +128,7 @@ h1 {
     margin: 30px 30px;
     white-space: nowrap;
     text-decoration: none;
-    color: black;
+    color: $tx-3;
     cursor: pointer;
   }
   & > .link-container > a {
@@ -126,7 +136,7 @@ h1 {
     display: inline-block;
     margin: 30px 30px;
     text-decoration: none;
-    color: black;
+    color: $tx-3;
     cursor: default;
   }
   max-width: 1000px;
@@ -137,10 +147,11 @@ h1 {
     width: 24px;
     margin: 30px 30px 30px 0;
   }
+  //wtf is this?:
   &::after {
     max-width: 100vw;
     height: 100px;
-    background: black;
+    background: red;
   }
 }
 
@@ -151,6 +162,7 @@ h1 {
   }
   text-align: center;
   & > h1 {
+    color: black;
     font-weight: 100;
     font-size: 64px;
     margin: 24px 15px;
@@ -196,7 +208,7 @@ h1 {
       top: calc(454px - 0.087 * (50vw + 60px));
     }
     position: absolute;
-    background: #f5f5f5;
+    background: $bg-2;
     z-index: -1;
     bottom: 0;
     transform-origin: left bottom;
@@ -293,44 +305,49 @@ h1 {
 
 #contact-container {
   margin: $h1-margin 0 0;
-  background: #003342;
+  background: $bg-1;
   & * {
     text-align: center;
     text-decoration: none;
-    color: #c2e2ea;
+    color: $tx-1;
   }
   & > p {
     font-size: 36px;
     margin: 0;
     padding-bottom: 40px;
     & > a:hover {
-      color: white;
+      color: $tx-4;
     }
     @media screen and (max-width: 480px) {
       font-size: 32px;
     }
   }
   & > h1 {
-    color:  #76bed0;
+    color:  $tx-2;
   }
 }
 
 // --------------------------------------------------
 .single-button {
-  height: 24px;
-  line-height: 24px;
-  background: #eeeeee;
+  height: 36px;
+  line-height: 36px;
+  background: $bg-3;
   text-decoration: none;
-  color: black;
-  border: 1px solid black;
-  padding: 0 8px;
+  color: $tx-1;
+  border: none;
+  padding: 0 16px;
   border-radius: 4px;
   outline: none;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
   &:hover {
     transform: translateY(-1px);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.12), 0px 3px 3px 0px rgba(0,0,0,0.24);
   }
   &:active {
     transform: translateY(1px);
+    background: $bg-4;
+    // box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.22), 0px 1px 1px 0px rgba(0,0,0,0.34);
   }
 }
 
