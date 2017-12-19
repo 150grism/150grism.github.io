@@ -183,6 +183,7 @@ h1 {
 }
 
 #skillset-container {
+  position: relative;
   margin: $padding1 auto;
   @media screen and (max-width: 480px) {
     margin: $padding2 auto;
@@ -201,16 +202,17 @@ h1 {
   &:before {
     content: '';
     width: 100%;
-    height: 560px;
-    top: calc(476px - 0.087 * (50vw + 60px));
+    // height: 560px;
+    top: calc(-1 * (50vw * 0.08748 - 60px) - 80px);
+    // top: calc(476px - 0.087 * (50vw + 60px));
     @media screen and (min-width: 467px) {
-      top: calc(428px - 0.087 * (50vw + 60px));
+      // top: calc(428px - 0.087 * (50vw + 60px));
     }
     @media screen and (min-width: 680px) {
-      height: 480px;
+      // height: 480px;
     }
     @media screen and (min-width: 900px) {
-      top: calc(454px - 0.087 * (50vw + 60px));
+      // top: calc(454px - 0.087 * (50vw + 60px));
     }
     position: absolute;
     background: $bg-2;
