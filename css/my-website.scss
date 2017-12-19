@@ -45,10 +45,11 @@ h1 {
     & > img {
       margin: auto 0; 
       width: 100%;
+      max-height: 86px;
     }
     & > p {
       text-align: center;
-      margin: 4px -4px;
+      margin: 4px -4px 26px;
     }
     @media screen and (max-width: 480px) {
       width: calc(#{$skill-width} * 0.8);
