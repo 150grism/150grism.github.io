@@ -1,14 +1,3 @@
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = function (callback, thisArg) {
-      thisArg = thisArg || window;
-      for (var i = 0; i < this.length; i++) {
-          callback.call(thisArg, this[i], i, this);
-      }
-  };
-  var edge = true;
-}
-//-----------------------------------------------------------------
-
 var menuButtons = document.querySelectorAll('.mobile-menu');
 var navOverlay = document.querySelector('.nav-overlay');
 var navWide = document.querySelector('.nav-wide');
@@ -35,7 +24,7 @@ navLinks.forEach((b) => {
       navOverlay.style.width = "0%";
       overlayVisible = false;
     }
-    if (edge) {
+    if (typeof window.scrollBy === 'function' && window.scrollBy) {
       window.scrollBy(0, distanceToDestination + 30);
     } else {
       window.scrollBy({top: distanceToDestination + 30, left: 0, behavior: "smooth"});
