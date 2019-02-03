@@ -1,3 +1,4 @@
+import './css/style.scss'
 var menuButtons = document.querySelectorAll('.mobile-menu');
 var navOverlay = document.querySelector('.nav-overlay');
 var navWide = document.querySelector('.nav-wide');
@@ -25,9 +26,9 @@ navLinks.forEach((b) => {
       overlayVisible = false;
     }
     if (typeof window.scrollBy === 'function' && window.scrollBy) {
-      window.scrollBy(0, distanceToDestination + 30);
-    } else {
       window.scrollBy({top: distanceToDestination + 30, left: 0, behavior: "smooth"});
+    } else {
+      window.scrollBy(0, distanceToDestination + 30);
     }
   }
 });
