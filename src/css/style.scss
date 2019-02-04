@@ -1,8 +1,15 @@
+body {
+  font-family: 'Exo 2', sans-serif;
+}
+
 .section {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
+  flex-direction: row;
   justify-content: space-around;
   font-family: 'Exo 2', sans-serif;
   &__link {
@@ -11,9 +18,7 @@
 }
 
 .intro {
-  flex-direction: column;
-  align-items: center;
-  &__head {
+  &__title {
     font-family: 'Exo 2', sans-serif;
     // font-family: 'Open Sans', sans-serif;
     font-size: 90px;
@@ -22,5 +27,22 @@
   &__button {
     width: 200px;
     height: 70px;
+  }
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__logo {
+    width: 40px;
+    height: 40px;
+  }
+  &__caption {
+    margin: 0;
   }
 }

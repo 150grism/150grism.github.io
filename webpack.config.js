@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   devServer: {
     compress: true,
     port: 9000
