@@ -46,3 +46,13 @@ body {
     margin: 0;
   }
 }
+
+.svgs {
+  width: 400px;
+  margin: 40px auto;
+  display: block;
+  position: relative;
+  &__child {
+    position: absolute;
+  }
+}
