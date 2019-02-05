@@ -14,7 +14,7 @@
   <div class="nav-overlay">
     <img src="src/icons/close.svg" alt="close" class="mobile-menu">
     <a class="nav-link" data-destination="skillset-container">Навыки</a>
-    <a class="nav-link" data-destination="portfolio-container">Портфолио</a>
+    <a class="nav-link" data-destination="portfolio-container">Проекты</a>
     <a class="nav-link" data-destination="contact-container">Контакты</a>
   </div>
   <div class="nav-wide">  
@@ -23,7 +23,7 @@
       <img src="src/icons/hamburger.svg" alt="menu" class="mobile-menu">
       <div class="link-container">
         <a class="nav-link" data-destination="skillset-container">Навыки</a>
-        <a class="nav-link" data-destination="portfolio-container">Портфолио</a>
+        <a class="nav-link" data-destination="portfolio-container">Проекты</a>
         <a class="nav-link" data-destination="contact-container">Контакты</a>
       </div>
     </div>
@@ -36,11 +36,11 @@
     <h1>Навыки</h1>
     <div class="skillset">
       <div class="skill">
-        <img src="src/icons/reactJS.svg" alt="ReactJS">
-        <p>ReactJS</p>
+        <img src="src/icons/ReactJs.svg" alt="ReactJs">
+        <p>ReactJs</p>
       </div>
       <div class="skill">
-        <img src="src/icons/TypeScript.svg" alt="Vue"">
+        <img src="src/icons/TypeScript.svg" alt="TypeScript"">
         <p>TypeScript</p>
       </div>
       <div class="skill">
@@ -90,10 +90,67 @@
     </div>
   </div>
   <div id="portfolio-container">
-    <h1>Портфолио</h1>
+    <h1>Проекты</h1>
     <div class="showcase">
       <div class="project-picture">
-        <img src="src/img/calculator.png" alt="picture">
+        <img src="src/img/stock-app_tinypng.png" alt="stock-app">
+        <div class="buttons">
+          <a href="https://rehfres.github.io/stock-app/" target="_blank">открыть</a>
+          <a href="https://github.com/rehfres/stock-app/" target="_blank" class="buttons__git">GitHub</a>
+        </div>
+      </div>
+      <div class="project-text">
+        <h4>Приложение для мониторинга акций</h4>
+        <p>Подтягивает внутридневные данные с IEX через веб-сокеты. Отображает графики на канвасе. Сохраняет данные пользователя в Firebase</p>
+        <h5>Технологии:</h5>
+        <div class="technologies">
+          <div class="skill">
+            <img src="src/icons/ReactJs.svg" alt="ReactJs">
+          </div>
+          <div class="skill">
+            <img src="src/icons/Firebase.svg" alt="ReactJs" style="transform: scale(.82)">
+          </div>
+          <div class="skill">
+            <img src="src/icons/HTML5.svg" alt="HTML5">
+          </div>
+          <div class="skill">
+            <img src="src/icons/CSS3.svg" alt="CSS3">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="showcase showcase--reverse">
+      <div class="project-picture">
+        <img src="src/img/extension_tinypng.png" alt="extension">
+        <div class="buttons">
+          <a href="https://marketplace.visualstudio.com/items?itemName=rehfres.colored-console-log" target="_blank">открыть</a>
+          <a href="https://github.com/rehfres/colored-console-log/" target="_blank" class="buttons__git">GitHub</a>
+        </div>
+      </div>
+      <div class="project-text">
+        <h4>Расширение для VS Code</h4>
+        <p>Создает цветные <code>console.log()</code> сообщения для браузера.</p>
+        <h5>Технологии:</h5>
+        <div class="technologies">
+          <div class="skill">
+            <img src="src/icons/TypeScript.svg" alt="TypeScript"">
+          </div>
+          <div class="skill">
+            <img src="src/icons/HTML5.svg" alt="HTML5">
+            <!-- <p>HTML5</p> -->
+          </div>
+          <div class="skill">
+            <img src="src/icons/CSS3.svg" alt="CSS3">
+            <!-- <p>CSS3</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="showcase">
+      <div class="project-picture">
+        <img src="src/img/calculator_tinypng.png" alt="calculator">
         <div class="buttons">
           <a href="https://rehfres.github.io/calculator/" target="_blank">открыть</a>
           <a href="https://github.com/rehfres/calculator/" target="_blank" class="buttons__git">GitHub</a>
@@ -101,7 +158,7 @@
       </div>
       <div class="project-text">
         <h4>Калькулятор</h4>
-        <p>Мой первый веб-проект. Я постарался наиболее полно и точно скопировать функции, интерфейс и поведение стандартного калькулятора на своем телефоне.</p>
+        <p>Первый веб-проект. Имитирует функции, интерфейс и поведение стандартного калькулятора на телефоне.</p>
         <h5>Технологии:</h5>
         <div class="technologies">
           <div class="skill">
@@ -122,7 +179,7 @@
     <div class="separator"></div>
     <div class="showcase showcase--reverse">
       <div class="project-picture">
-        <img src="src/img/fireworks.png" alt="picture">
+        <img src="src/img/fireworks_tinypng.png" alt="fireworks">
         <div class="buttons">
           <a href="https://rehfres.github.io/fireworks/" target="_blank">открыть</a>
           <a href="https://github.com/rehfres/fireworks/" target="_blank" class="buttons__git">GitHub</a>
@@ -130,7 +187,7 @@
       </div>
       <div class="project-text">
         <h4>Фейерверки</h4>
-        <p>Небольшой проект с использованием HTML5 Canvas.</p>
+        <p>Запускает фейерверки с помощью HTML5 Canvas.</p>
         <h5>Технологии:</h5>
         <div class="technologies">
           <div class="skill">
@@ -148,7 +205,7 @@
         </div>
       </div>
     </div>
-    <div class="separator"></div>
+    <!-- <div class="separator"></div>
     <div class="showcase">
       <div class="project-picture">
         <img src="src/img/todo-лист.png" alt="picture">
@@ -159,32 +216,32 @@
       </div>
       <div class="project-text">
         <h4>To&ndash;do лист</h4>
-        <p>Менеджер задач на ReactJS с базовыми функциями. Для дизайна использовалась стандартная тема Bootstrap v4 с незначительными изменениями.</p>
+        <p>Менеджер задач на ReactJs с базовыми функциями. Для дизайна использовалась стандартная тема Bootstrap v4 с незначительными изменениями.</p>
         <h5>Технологии:</h5>
         <div class="technologies">
           <div class="skill">
-            <img src="src/icons/reactJS.svg" alt="ReactJS">
-            <!-- <p>ReactJS</p> -->
+            <img src="src/icons/ReactJs.svg" alt="ReactJs">
+            <p>ReactJs</p>
           </div>
           <div class="skill">
             <img src="src/icons/Bootstrap.svg" alt="Bootstrap">
-            <!-- <p>Bootstrap</p> -->
+            <p>Bootstrap</p>
           </div>
           <div class="skill">
             <img src="src/icons/JS.svg" alt="Javascript">
-            <!-- <p>Javascript</p> -->
+            <p>Javascript</p>
           </div>
           <div class="skill">
             <img src="src/icons/HTML5.svg" alt="HTML5">
-            <!-- <p>HTML5</p> -->
+            <p>HTML5</p>
           </div>
           <div class="skill">
             <img src="src/icons/CSS3.svg" alt="CSS3">
-            <!-- <p>CSS3</p> -->
+            <p>CSS3</p>
           </div>
         </div>
       </div>
-    </div>       
+    </div>-->     
   </div>
   <div id="contact-container">
     <h1>Контакты</h1>
