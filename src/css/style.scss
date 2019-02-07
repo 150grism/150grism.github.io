@@ -232,14 +232,17 @@ h1 {
   max-width: 1000px;
   & > .showcase {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     // &--bg {
     //   background: rgba(0, 0, 0, 0.144);
     // }
-    padding: $padding1 0;
-    @media screen and (max-width: 480px) {
-      padding: $padding2 0;
+    padding: 90px 0;
+    &:first-of-type {
+      padding-top: 60px;
     }
+    // @media screen and (max-width: 480px) {
+    //   padding: $padding2 0;
+    // }
     & > .project-picture {
       flex: 1;
       margin: 0 15px;
@@ -263,6 +266,7 @@ h1 {
       font-size: 20px;
       flex: 2;
       padding: 0 30px;
+      margin-bottom: 60px;
       & > h4 {
         margin: 0;
         font-weight: 300;
@@ -304,6 +308,7 @@ h1 {
         flex-direction: row-reverse;
         & >.project-text {
           text-align: right;
+          margin-bottom: 0;
           & > .technologies {
             justify-content: flex-end;
           }
@@ -371,10 +376,10 @@ h1 {
 }
 
 .buttons {
-  margin-top: 25px;
-  @media screen and (max-width: 480px) {
-    margin: 25px 0 60px;
-  }
+  margin-top: 60px;
+  // @media screen and (max-width: 480px) {
+  //   margin-top: 25px 0 60px;
+  // }
   & > a {
     @extend .single-button;
   }
