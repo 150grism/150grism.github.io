@@ -196,7 +196,7 @@ h1 {
 #skillset-container {
   position: relative;
   margin: $padding1 auto;
-  z-index: -1;
+//   z-index: -1;
   @media screen and (max-width: 480px) {
     margin: $padding2 auto;
   }
